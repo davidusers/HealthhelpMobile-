@@ -3,7 +3,7 @@ import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/main.dart';
 import 'package:flutter_application_1/pages/inscription_medecin.dart';
-import 'package:flutter_application_1/pages/views/actualite.dart';
+import 'package:flutter_application_1/pages/views/schedule.dart';
 import 'package:flutter_application_1/pages/views/consultation.dart';
 import 'package:flutter_application_1/pages/views/plus.dart';
 import 'package:flutter_application_1/pages/views/interface_patient.dart';
@@ -40,7 +40,7 @@ class _AceuilpatientState extends State<Aceuilpatient> {
         controller: _pageController,
         children: const <Widget>[
           Patient(),
-          Actualite(),
+          Shedule(),
           Consultation(),
           Plus(),
         ],
@@ -63,9 +63,9 @@ class _AceuilpatientState extends State<Aceuilpatient> {
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Acceuil'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.newspaper_sharp), label: 'Actualite'),
+              icon: Icon(Icons.calendar_today), label: 'Calendrier'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.video_camera_back), label: 'Consultation'),
+              icon: Icon(Icons.message), label: 'message'),
           BottomNavigationBarItem(
               icon: Icon(Icons.settings), label: 'Parametre'),
         ],

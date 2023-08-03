@@ -94,7 +94,7 @@ class Rendezvous extends StatelessWidget {
                               ),
                             ),
                           ],
-                        )
+                        ),
                       ],
                     ),
                   )
@@ -235,22 +235,111 @@ class Rendezvous extends StatelessWidget {
                                     overflow: TextOverflow.ellipsis,
                                     style: TextStyle(
                                       color: Colors.black,
-                                    ),),
+                                    ),
+                                    ),
                                      ),
                                 ],
                               ),
                             ),
+                            
                           );
                         },
                       ),
                       ),
+                      SizedBox(height: 10),
+                      Text("Localisation",
+                       style:TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500,
+                       ),
+                      ),
+                      ListTile(
+                        leading: Container(
+                          padding: EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                            color: Color(0xFFF0EEFA),
+                            shape: BoxShape.circle),
+                            child: Icon(Icons.location_on,
+                            color: Color(0xFF7165D6),
+                            size: 33,
+                            ),
+                          ),
+                          title: Text("Douala cameroun hopital de deido ",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
+                          ),
+                          subtitle: Text("address line of the medical center"),
+                          ),
+                ],
+                        ),
+                      ),
                 ],
               ),
-            )
-          ],
-        ),
-      ),
-    );
+            ),
+            bottomNavigationBar: Container(
+              padding: EdgeInsets.all(15),
+              height: 130,
+              decoration: BoxDecoration(
+                color:Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black12,
+                    blurRadius: 4,
+                    spreadRadius: 2,
+                  ),
+                ],
+                 ),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text("Montant de la consultation",
+                      style: TextStyle(
+                        color: Colors.black54,
+                      ),
+                      ),
+                      Text("3000 fcfa",
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black54,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 15),
+                  InkWell(
+                    onTap: () {
+                      
+                    },
+                    child: Container(
+                      width: MediaQuery.of(context).size.width,
+                      padding: EdgeInsets.symmetric(vertical: 15),
+                      decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Center(
+                        child: Text(
+                          "carnet rendez- vous",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                        ),
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
+        
+        );
+     
+  
   }
 }
 

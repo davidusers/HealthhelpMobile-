@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/animation.dart';
 import 'package:flutter_application_1/main.dart';
@@ -77,8 +79,9 @@ class Utilisateur extends StatelessWidget {
                   },
                 ),
               ),
-            )
-          ]),
+            ),
+          ],
+          ),
         ),
       ),
     );

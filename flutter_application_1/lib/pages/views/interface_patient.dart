@@ -5,7 +5,7 @@ import 'package:flutter_application_1/FAQ/faq.dart';
 import 'package:flutter_application_1/pages/navigationbar.dart';
 import 'package:flutter_application_1/pages/acceuil_patient.dart';
 import 'package:flutter_application_1/pages/views/consultation.dart';
-import 'package:flutter_application_1/pages/views/actualite.dart';
+import 'package:flutter_application_1/pages/views/schedule.dart';
 import 'package:flutter_application_1/conseil/conseil.dart';
 import 'package:flutter_application_1/Carnet/Carnet.dart';
 import 'package:flutter_application_1/Forum/Forum.dart';
@@ -42,6 +42,9 @@ class _InterfcepatientState extends State<Interfcepatient> {
       
       appBar: AppBar(
         title: Text('Acceuil'
+        ,style: TextStyle(
+          fontWeight: FontWeight.w500
+        ),
         ),
         
       ),
@@ -108,6 +111,7 @@ class _InterfcepatientState extends State<Interfcepatient> {
                 
               ),
             ),
+            // service du kit medical
             Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20),
@@ -151,6 +155,7 @@ class _InterfcepatientState extends State<Interfcepatient> {
                 ],
               ),
             ),
+            // liste des docteurs de la plateforme 
             Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20),
@@ -194,6 +199,7 @@ class _InterfcepatientState extends State<Interfcepatient> {
                 ],
               ),
             ),
+            // services des rendezvous disponible 
             Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20),
@@ -237,6 +243,7 @@ class _InterfcepatientState extends State<Interfcepatient> {
                 ],
               ),
             ),
+            // services de la medecines chinoise 
             Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20),
@@ -280,7 +287,7 @@ class _InterfcepatientState extends State<Interfcepatient> {
                 ],
               ),
             ),
-
+            //services de la medecines traditionnelle ou de la medecine naturelle 
             Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20),
@@ -302,7 +309,7 @@ class _InterfcepatientState extends State<Interfcepatient> {
                           vertical: 8, horizontal: 16),
                       color: Colors.black.withOpacity(0.6),
                       child: Text(
-                        'Medecine traditionnelle ',
+                        'Naturopathe ',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 16,
@@ -367,6 +374,7 @@ class _InterfcepatientState extends State<Interfcepatient> {
                 ],
               ),
             ),
+            // dossiers medical  du patient 
             Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20),
@@ -410,6 +418,7 @@ class _InterfcepatientState extends State<Interfcepatient> {
                 ],
               ),
             ),
+            //listes des vaccins disponibles 
             Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20),
@@ -453,6 +462,7 @@ class _InterfcepatientState extends State<Interfcepatient> {
                 ],
               ),
             ),
+            //services exammens de laboratoires a faire sur l'application 
             
             Card(
               shape: RoundedRectangleBorder(
@@ -497,6 +507,7 @@ class _InterfcepatientState extends State<Interfcepatient> {
                 ],
               ),
             ),
+            // actuallite de la plateforme
             Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20),
@@ -532,7 +543,7 @@ class _InterfcepatientState extends State<Interfcepatient> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => Actualite(),
+                            builder: (context) => Shedule(),
                           )
                           );
                     },
@@ -584,7 +595,8 @@ class _InterfcepatientState extends State<Interfcepatient> {
                 ],
               ),
             ),
-            // message
+            
+            //  message
             Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20),

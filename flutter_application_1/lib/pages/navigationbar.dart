@@ -54,7 +54,7 @@ class _NavbarState extends State<Navbar> {
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Acceuil'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.newspaper_sharp), label: 'Actualite'),
+              icon: Icon(Icons.schedule), label: 'Calendrier'),
           BottomNavigationBarItem(
               icon: Icon(Icons.video_camera_back), label: 'Consultation'),
           BottomNavigationBarItem(
