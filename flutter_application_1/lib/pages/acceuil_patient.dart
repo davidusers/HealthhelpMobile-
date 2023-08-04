@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/main.dart';
 import 'package:flutter_application_1/pages/inscription_medecin.dart';
 import 'package:flutter_application_1/pages/views/schedule.dart';
-import 'package:flutter_application_1/pages/views/consultation.dart';
+import 'package:flutter_application_1/pages/views/message.dart';
 import 'package:flutter_application_1/pages/views/plus.dart';
 import 'package:flutter_application_1/pages/views/interface_patient.dart';
 
@@ -38,10 +38,10 @@ class _AceuilpatientState extends State<Aceuilpatient> {
           });
         },
         controller: _pageController,
-        children: const <Widget>[
+        children:  <Widget>[
           Patient(),
           Shedule(),
-          Consultation(),
+          Consultations(),
           Plus(),
         ],
       ),

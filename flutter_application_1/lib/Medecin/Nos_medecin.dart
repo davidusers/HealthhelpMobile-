@@ -240,7 +240,8 @@ class NosMedecin extends StatelessWidget {
                         CircleAvatar(
                           radius: 35,
                           backgroundImage:
-                              AssetImage("assets/image/${imgs[index]}"),
+                              AssetImage("assets/image/${imgs[index]}"
+                              ),
                         ),
                         Text("Dr .Doctor Name ",
                         style: TextStyle(
