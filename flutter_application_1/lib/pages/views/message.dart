@@ -3,16 +3,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/util/emojie_c.dart';
 import 'package:flutter_application_1/list_doct.dart';
+import 'package:flutter_application_1/pages/views/chat_Screen.dart';
 
 // ici je vais coder linterface message
 class Consultations extends StatelessWidget {
+  List imgs = ['doct1.jpg', 'doct2.jpg', 'doct3.jpg', 'dav.jpg'];
+  
 
- 
-
- 
-List imgs = ['doct1.jpg', 'doct2.jpg', 'doct3.jpg', 'dav.jpg'];
-
- 
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -70,6 +67,17 @@ List imgs = ['doct1.jpg', 'doct2.jpg', 'doct3.jpg', 'dav.jpg'];
             ),
           ),
           SizedBox(height: 20),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Text("Active Now",
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+          
+            ),
+            ),
+          ),
+          SizedBox(height: 10),
           SizedBox(
             height: 90,
             child: ListView.builder(
@@ -100,12 +108,14 @@ List imgs = ['doct1.jpg', 'doct2.jpg', 'doct3.jpg', 'dav.jpg'];
                           height: 65,
                           width: 65,
                           child: ClipRRect(
-                            borderRadius: BorderRadius.circular(30),
-                            child: Image.asset(
-                              "assets/image/${imgs[index]}", // probleme a ce niveua
-                              fit: BoxFit.cover,
-                            ),
-                          ),
+  borderRadius: BorderRadius.circular(30),
+  child: Image.asset(
+    "assets/image/${index < imgs.length ?
+     imgs[index] 
+    : 'placeholder.jpg'}",
+    fit: BoxFit.cover,
+  ),
+),
                         ),
                       ),
                       Container(
@@ -130,40 +140,60 @@ List imgs = ['doct1.jpg', 'doct2.jpg', 'doct3.jpg', 'dav.jpg'];
               },
             ),
           ),
+          SizedBox(height: 20),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Text("Recent chat",
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+          
+            ),
+            ),
+          ),
+          SizedBox(height: 10),
           ListView.builder(
             physics: NeverScrollableScrollPhysics(),
             itemCount: 6,
             shrinkWrap: true,
             itemBuilder: (context, index) {
-              return ListTile(
-                onTap: () {},
-                leading: CircleAvatar(
-                  radius: 30,
-                  backgroundImage: AssetImage(
-                    "assets/image/${imgs[index]}",
+              return Padding(
+                padding: const EdgeInsets.only(bottom: 10),
+                child: ListTile(
+                  minVerticalPadding: 20,
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => chatScreen(),)
+                    ,);
+                  },
+                  leading: CircleAvatar(
+                    radius: 30,
+                    backgroundImage: AssetImage(
+                "assets/image/${index < imgs.length ? imgs[index] : 'placeholder.jpg'}",
+                    ),
                   ),
-                ),
-                title: Text(
-                  "Dr . doctor name",
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
+                  title: Text(
+                    "Dr . doctor name",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                ),
-                subtitle: Text(
-                  "Bonjour votre doctor est pres de chez vous?",
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    fontSize: 16,
-                    color: Colors.black54,
+                  subtitle: Text(
+                    "Bonjour votre doctor est pres de chez vous?",
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.black54,
+                    ),
                   ),
-                ),
-                trailing: Text("12:00",
-                style: TextStyle(
-                  fontSize: 15,
-                  color: Colors.black54,
-                ),
+                  trailing: Text(
+                    "12:00",
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.black54,
+                    ),
+                  ),
                 ),
               );
             },
